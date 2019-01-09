@@ -1,5 +1,5 @@
 # DocumentIdentification-AutoFill
-Captures the text and put data in the required fields. 
+Main Aim : Captures the text and put data in the required fields. 
 
 
 Step-1 :
