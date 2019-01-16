@@ -6,4 +6,4 @@ Step-1 :
     Generated random id cards and printtext.py file has the code .
     
 Step-2 :
-    Built a CNN Model for Identifying Different States Cards
+    Built a CNN Model for Identifying Different States Cards and use cnn.pkl for pretrained model.
