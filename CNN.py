@@ -95,7 +95,7 @@ classifier.fit_generator(training_set,
 import numpy as np
 import cv2
 from keras.preprocessing import image
-test_image = image.load_img('mpbp.jpg', target_size = (128, 128))
+test_image = image.load_img('testfiles/mpbp.jpg', target_size = (128, 128))
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis = 0)
 result = classifier.predict(test_image)
@@ -108,12 +108,6 @@ elif result[0][1]==1:
 elif result[0][2]==1:
     prediction="MP"
 print(prediction)
-
-
-# In[ ]:
-
-
-
 
 
 # In[10]:
@@ -137,13 +131,29 @@ cnn_pkl.close()
 # In[12]:
 
 
-cnn_pkl = open(file, 'rb')
+cnn_pkl = open('cnn.pkl', 'rb')
 cnn = pickle.load(cnn_pkl)
 print("Loaded CNN :: ", cnn)
 
 
-# In[ ]:
+# In[13]:
 
 
-
+#using the saved model
+import numpy as np
+import cv2
+from keras.preprocessing import image
+test_image = image.load_img('testfiles/mpbp.jpg', target_size = (128, 128))
+test_image = image.img_to_array(test_image)
+test_image = np.expand_dims(test_image, axis = 0)
+result = cnn.predict(test_image)
+# training_set.class_indices
+if result[0][0] == 1:
+    prediction = 'AP'
+    
+elif result[0][1]==1:
+    prediction = 'Bihar'
+elif result[0][2]==1:
+    prediction="MP"
+print(prediction)
 
