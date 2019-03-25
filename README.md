@@ -7,3 +7,5 @@ Step-1 :
     
 Step-2 :
     Built a CNN Model for Identifying Different States Cards and use cnn.pkl for pretrained model.
+
+**This trained model works for identifying _Bihar_ and _Madhyapradesh_ Driving license cards**
