@@ -1,4 +1,4 @@
-# DocumentIdentification-AutoFill
+# DocumentIdentification and Field Extraction
 Main Aim : Captures the text and put data in the required fields. 
 
 
